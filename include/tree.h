@@ -48,7 +48,7 @@ class Tree {
             gperm(root->ch[k], numb);
         }
     }
- 
+
  public:
     std::string operator[](int k) const {
         return numbs[k];
