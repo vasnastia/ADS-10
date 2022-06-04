@@ -6,11 +6,11 @@
 #include  "tree.h"
 
 std::vector<char> getPerm(const Tree& tree, int n) {
-std::string optsTree = tree[n - 1];
-std::vector<char> numbs;
-for (int i = 0; i < optsTree.length(); i++) {
-    numbs.push_back(optsTree[i]);
-}
-return numbs;
-}
+    std::string optsTree = tree[n - 1];
+    std::vector<char> numbs;
+    for (int k = 0; k < optsTree.length(); k++) {
+        numbs.push_back(optsTree[i]);
+    }
+    return numbs;
+    }
 }
