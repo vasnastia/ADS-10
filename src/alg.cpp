@@ -12,5 +12,4 @@ std::vector<char> getPerm(const Tree& tree, int n) {
         numbs.push_back(optsTree[i]);
     }
     return numbs;
-    }
 }
