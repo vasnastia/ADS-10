@@ -18,25 +18,25 @@ private:
         if (_numbs.size() == 0)
             return;
         if (root->val != '-') {
-            for (auto i = _numbs.begin(); i != _numbs.end(); ++i) {
-                if (*i == root->val) {
-                    _numbs.erase(i);
+            for (auto k = _numbs.begin(); k != _numbs.end(); ++k) {
+                if (*k == root->val) {
+                    _numbs.erase(k);
                     break;
                 }
             }
         }
-        for (size_t i = 0; i < _numbs.size(); ++i) {
+        for (size_t k = 0; k < _numbs.size(); ++k) {
             root->ch.push_back(new Node)
         }
-        for (size_t i = 0; i < root->ch.size(); ++i) {
-            root->ch[i]->val = _numbs[i];
+        for (size_t k = 0; k < root->ch.size(); ++k) {
+            root->ch[k]->val = _numbs[k];
         }
-        for (size_t i = 0; i < root->ch.size(); ++i) {
-            crTree(root->ch[i], _numbs);
+        for (size_t k = 0; k < root->ch.size(); ++k) {
+            crTree(root->ch[k], _numbs);
         }
     }
 
-    void getPerm(Node* root, std::string numb = "") {
+    void gperm(Node* root, std::string numb = "") {
         if (root->val != '-') {
             numb += root->val;
         }
@@ -45,19 +45,19 @@ private:
             numbs.push_back(numb);
             return;
         }
-        for (size_t i = 0; i < root->ch.size(); ++i) {
-            getPerm(root->ch[i], numb);
+        for (size_t k = 0; k < root->ch.size(); ++k) {
+            gperm(root->ch[k], numb);
         }
 
 public:
-    std::string operator[](int i) const {
-        return numbs[i];
+    std::string operator[](int k) const {
+        return numbs[k];
     }
     explicit Tree(std::vector<char> val) {
         root = new Node;
         root->val = '-';
         crTree(root, val);
-        getPerm(root);
+        gperm(root);
     }
 }
   
