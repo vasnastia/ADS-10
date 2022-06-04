@@ -59,5 +59,5 @@ class Tree {
         crTree(root, val);
         gperm(root);
     }
-}
+};
 #endif  // INCLUDE_TREE_H_
