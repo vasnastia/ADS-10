@@ -6,8 +6,8 @@
 #include <vector>
 
 class Tree {
-private:
-    struct Node { // ...
+ private:
+    struct Node {
         char val;
         std::vector<Node*> ch;
     };
@@ -26,7 +26,7 @@ private:
             }
         }
         for (size_t k = 0; k < _numbs.size(); ++k) {
-            root->ch.push_back(new Node)
+            root->ch.push_back(new Node);
         }
         for (size_t k = 0; k < root->ch.size(); ++k) {
             root->ch[k]->val = _numbs[k];
@@ -35,7 +35,6 @@ private:
             crTree(root->ch[k], _numbs);
         }
     }
-
     void gperm(Node* root, std::string numb = "") {
         if (root->val != '-') {
             numb += root->val;
@@ -48,8 +47,8 @@ private:
         for (size_t k = 0; k < root->ch.size(); ++k) {
             gperm(root->ch[k], numb);
         }
-
-public:
+    }
+ public:
     std::string operator[](int k) const {
         return numbs[k];
     }
